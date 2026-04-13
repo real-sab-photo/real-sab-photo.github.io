@@ -1,0 +1,141 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografie Portfolio | Kostenloses Hosting bereit</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .gallery-image {
+            aspect-ratio: 3/2;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="selection:bg-amber-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter text-amber-500 uppercase">
+                Portfolio<span class="text-white">.</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
+                <a href="#portfolio" class="hover:text-amber-500 transition">Galerie</a>
+                <a href="#about" class="hover:text-amber-500 transition">Über mich</a>
+                <a href="#contact" class="hover:text-amber-500 transition">Kontakt</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button onclick="document.getElementById('mobile-nav').classList.toggle('hidden')" class="md:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Nav -->
+        <div id="mobile-nav" class="hidden md:hidden bg-slate-900 border-b border-slate-800 p-6 space-y-4">
+            <a href="#portfolio" class="block">Galerie</a>
+            <a href="#about" class="block">Über mich</a>
+            <a href="#contact" class="block text-amber-500">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight">
+            Visual <span class="text-amber-500">Storytelling</span>
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Ich fange die Schönheit in der Stille und das Chaos in der Bewegung ein. Professionelle Fotografie für Marken und Menschen.
+        </p>
+    </header>
+
+    <!-- Galerie -->
+    <section id="portfolio" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Bild 1 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-slate-800">
+                <img src="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800&q=80" alt="Berglandschaft" class="gallery-image w-full transition duration-500 group-hover:scale-110 group-hover:opacity-50">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="text-white font-bold tracking-widest uppercase">Landschaft</span>
+                </div>
+            </div>
+            <!-- Bild 2 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-slate-800">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80" alt="Porträt Frau" class="gallery-image w-full transition duration-500 group-hover:scale-110 group-hover:opacity-50">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="text-white font-bold tracking-widest uppercase">Porträts</span>
+                </div>
+            </div>
+            <!-- Bild 3 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-slate-800">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80" alt="Stadtarchitektur" class="gallery-image w-full transition duration-500 group-hover:scale-110 group-hover:opacity-50">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="text-white font-bold tracking-widest uppercase">Architektur</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über Mich -->
+    <section id="about" class="py-20 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-3xl font-bold mb-6">Hinter der Kamera</h2>
+                <p class="text-slate-400 mb-6 leading-loose">
+                    Mein Name ist [Dein Name]. Mit meiner Kamera erkunde ich die Welt seit über einem Jahrzehnt. Mein Stil ist geprägt von natürlichem Licht und echten Emotionen.
+                </p>
+                <div class="flex space-x-4">
+                    <div class="text-center p-4 bg-slate-900 rounded-lg">
+                        <div class="text-amber-500 font-bold text-2xl">10+</div>
+                        <div class="text-xs uppercase text-slate-500">Jahre Erfahrung</div>
+                    </div>
+                    <div class="text-center p-4 bg-slate-900 rounded-lg">
+                        <div class="text-amber-500 font-bold text-2xl">200+</div>
+                        <div class="text-xs uppercase text-slate-500">Projekte</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="aspect-square bg-slate-700 rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition duration-700">
+                    <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=800&q=80" alt="Fotograf bei der Arbeit" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt mit Formspree Integration -->
+    <section id="contact" class="py-20 px-6 max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Projekt starten?</h2>
+        <p class="text-slate-400 mb-10">Schreibe mir eine Nachricht. Dieses Formular nutzt Formspree und funktioniert ohne eigenen Server.</p>
+        
+        <!-- WICHTIG: Ersetze 'deine-email@beispiel.de' durch deine echte Adresse bei formspree.io -->
+        <form action="https://formspree.io/f/example" method="POST" class="space-y-4 text-left">
+            <div class="grid md:grid-cols-2 gap-4">
+                <input type="text" name="name" placeholder="Name" required class="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:border-amber-500 transition">
+                <input type="email" name="email" placeholder="E-Mail" required class="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:border-amber-500 transition">
+            </div>
+            <textarea name="message" rows="5" placeholder="Deine Nachricht" required class="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl focus:outline-none focus:border-amber-500 transition"></textarea>
+            <button type="submit" class="w-full py-4 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold rounded-xl transition transform active:scale-95">
+                Nachricht absenden
+            </button>
+        </form>
+    </section>
+
+    <footer class="py-10 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>&copy; 2024 Dein Name Fotografie. Gehostet auf GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
+
+```
